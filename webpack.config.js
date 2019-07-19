@@ -16,8 +16,9 @@ module.exports={
   ],
   module:{
     rules:[
-      {test:/\.css$/,use:["style-loader","css-loader"]},
-      {test:/\.(ttf|ogg)$/,use:"url-loader"},
+      {test:/\.css$/,loader:["style-loader","css-loader"]},
+      {test:/\.(ttf|ogg)$/,loader:"url-loader"},
+      {test:/\.(jpg|png|jpeg|gif)$/,loader:"url-loader?limit=76323&name=[hash:8]-[name].[ext]"},
       {test:/\.vue$/,loader:"vue-loader"}
     ]
   },
